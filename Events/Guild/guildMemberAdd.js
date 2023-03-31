@@ -81,7 +81,10 @@ module.exports = {
                         .setStyle(ButtonStyle.Danger),
                 );
 
+                
                 return logChannel.send({embeds: [Embed], components: [Buttons]});
         } else return logChannel.send({embeds: [Embed]});
+
+        
     }
 }

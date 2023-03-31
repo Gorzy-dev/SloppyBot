@@ -8,8 +8,21 @@ module.exports = {
     execute(client) {
         loadCommands(client);
 
-        client.user.setActivity(`memes`);
+        const statusArray = [
+            'memes',
+            'Chat GPT sucks',
+            'updating status',
+          ];
+          
+          let currentStatusIndex = 0;
+          
+          setInterval(() => {
+            client.user.setActivity(statusArray[currentStatusIndex]);
+            currentStatusIndex = (currentStatusIndex + 1) % statusArray.length;
+          }, 1000);
+          
 
         console.log(`Logged in as ${client.user.tag}!`);
+        console.log(`The bot is in ${client.guilds.cache.size} servers`);
     }
 }
