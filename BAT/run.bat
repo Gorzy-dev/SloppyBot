@@ -1,3 +1,3 @@
 @echo off
-pm2 start C:\dev\JSDiscord\TheSloppyBot\Sloppy.js
+pm2 start c:\dev\SloppyBot\SloppyBot\Sloppy.js
 pause

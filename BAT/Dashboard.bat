@@ -1,3 +1,3 @@
 @echo off
-pm2 dashboard C:\dev\JSDiscord\TheSloppyBot\Sloppy.js
+pm2 dashboard \Sloppy.js
 @pause
