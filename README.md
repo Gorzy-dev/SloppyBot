@@ -13,8 +13,8 @@ Client_ID=Bots Client ID
 bot_CS=Client Secret
 MONGO_URI=
 openai=
-OwnerName=wxwefr#1753
-botVersion=1.2v
+OwnerName=
+botVersion=
 imgurClientId=
 imgurClientSecret=
 ```
