@@ -1,9 +1,8 @@
-.env
+.vscode
+JSONS
+BAT
 node_modules
-package-lock
+Images
+.env
+package-lock.json
 package
-
-
-
-dir_to_ignore/BAT
-
