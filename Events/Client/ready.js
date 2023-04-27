@@ -1,3 +1,4 @@
+const { ActivityType } = require("discord.js");
 const { loadCommands } = require("../../Handlers/commandHandler")
 
 require('dotenv').config();
@@ -9,20 +10,18 @@ module.exports = {
         loadCommands(client);
 
         const statusArray = [
-            'memes',
-            'Chat GPT sucks',
-            'updating status',
+            '/Slash',
+            'Leaderboards',
+            'XP',
+            'Moderation',
           ];
           
           let currentStatusIndex = 0;
           
           setInterval(() => {
-            client.user.setActivity(statusArray[currentStatusIndex]);
+            client.user.setActivity(statusArray[currentStatusIndex], {type: ActivityType.Watching});
             currentStatusIndex = (currentStatusIndex + 1) % statusArray.length;
-          }, 1000);
-          
-
+          }, 5000);          
         console.log(`Logged in as ${client.user.tag}!`);
-        console.log(`The bot is in ${client.guilds.cache.size} servers`);
     }
 }

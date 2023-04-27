@@ -9,7 +9,7 @@ module.exports = {
      * @param {ChatInputCommandInteraction} interaction 
      * @param {Client} client 
      */
-
+    
     execute(interaction, client) {
         for(  const [key, value] of client.events )
         client.removeListener(`${key}`, value, true)

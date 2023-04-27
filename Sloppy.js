@@ -22,5 +22,4 @@ connect(process.env.MONGO_URI, {
 
 loadEvents(client);
 
-
-client.login(process.env.BOT_TOKEN);
+client.login(process.env.BOT_TOKEN); 

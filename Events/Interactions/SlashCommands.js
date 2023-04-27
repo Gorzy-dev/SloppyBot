@@ -18,7 +18,7 @@ module.exports = {
         ephemeral: true,
       });
 
-    if (command.developer && interaction.user.id !== process.env.devID)
+    if (command.developer && interaction.user.id !== process.env.DevID)
       return interaction.reply({
         content: "This command is only available to Dev.",
         ephemeral: true,
