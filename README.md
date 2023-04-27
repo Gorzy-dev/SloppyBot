@@ -7,10 +7,16 @@
 -create .env file
 
 ```
-BOT_TOKEN=
-PREFIX=
+BOT_TOKEN= 
+DevID=your ID
+Client_ID=Bots Client ID
+bot_CS=Client Secret
 MONGO_URI=
-openai=Needed for AI chat, grab an api key from open ai
+openai=
+OwnerName=wxwefr#1753
+botVersion=1.2v
+imgurClientId=
+imgurClientSecret=
 ```
 
 - node . and it should work
