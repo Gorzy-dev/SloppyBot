@@ -2,8 +2,8 @@
 node_modules
 package-lock
 package
-BAT
-Dashboard
-restart
-run
-stop
+BAT\Dashboard
+BAT\restart
+BAT\run
+BAT\stop
+
