@@ -1,37 +1,33 @@
-const { SlashCommandBuilder, ChatInputCommandInteraction, EmbedBuilder, Client } = require("discord.js")
+const { ChatInputCommandInteraction, EmbedBuilder, Client } = require("discord.js")
 const { Configuration, OpenAIApi } = require("openai")
 require('dotenv').config()
 
+
 module.exports = {
-    data: new SlashCommandBuilder()
-        .setName("chat")
-        .setDescription("Chat with me")
-        .addStringOption((opt) => opt.setName("prompt").setDescription("Enter your promt").setRequired(true)),
+    subCommand: "gpt.chat",
 
     /**
      * @param {Client} client
      * @param {ChatInputCommandInteraction} interaction 
      */
 
-    async execute(interaction, client) {
-
-        await interaction.deferReply()
-
-        interaction.editReply({ embeds: [new EmbedBuilder().setAuthor({ name: `${client.user.username} is generating response...`, iconURL: client.user.displayAvatarURL() })] })
-
+async execute(interaction, client) {
+    await interaction.deferReply()
+    interaction.editReply({ embeds: [new EmbedBuilder().setAuthor({ name: `${client.user.username} is generating response...`, iconURL: client.user.displayAvatarURL() })] })
+    
         try {
             const configuration = new Configuration({
                 apiKey: process.env.openai,
             })
 
             const openai = new OpenAIApi(configuration)
-
             const response = await openai.createCompletion({
                 model: "text-davinci-003",
                 prompt: interaction.options.getString("prompt"),
                 temperature: 0,
-                max_tokens: 2048
-            })
+                max_tokens: 1500
+                //max_tokens: 2048
+            }) 
 
             const Embed = new EmbedBuilder()
                 .setColor("Green")
