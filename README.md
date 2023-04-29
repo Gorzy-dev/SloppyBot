@@ -3,7 +3,6 @@
 
 Hey this is a Multi Bot im working on in Discord.js v14, It's mainly focused on API and AI. Here's a quick little guide on how to install/Add Features.
 
-[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
 
 ## OpenAI - API Key
